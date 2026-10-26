@@ -1,0 +1,137 @@
+/* Einfaches Haushaltsbuch - Website. Ein einziges Stylesheet, keine Abhaengigkeiten.
+   Palette wie in der App (ui/theme/Theme.kt): steingraue Flaeche, fast schwarze Tinte,
+   Haarlinien, Gelbgruen als einzige Signalfarbe - hier nur als Akzentlinie, nie als Textfarbe
+   (auf Hell zu wenig Kontrast). */
+
+:root {
+  --body: #EBEBE8;
+  --raised: #F7F7F5;
+  --ink: #151515;
+  --muted: #5F5F59;
+  --hairline: #D3D2CD;
+  --signal: #B7D225;
+  --measure: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body: #141413;
+    --raised: #1F1F1D;
+    --ink: #EDEDE9;
+    --muted: #A3A39C;
+    --hairline: #2E2E2B;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; background: var(--body); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--body);
+  color: var(--ink);
+  font: 16px/1.65 "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-wrap: break-word;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1.25rem; }
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--signal); color: #151515; font-weight: 600;
+  padding: .6rem 1rem; border-radius: 0 0 8px 0;
+}
+.skip:focus { left: 0; top: 0; }
+
+header.site { border-bottom: 1px solid var(--hairline); }
+header.site .wrap {
+  display: flex; flex-wrap: wrap; gap: .75rem 1.5rem;
+  align-items: baseline; justify-content: space-between;
+  padding-top: 1rem; padding-bottom: 1rem;
+}
+.brand {
+  font-weight: 700; font-size: 1.05rem; letter-spacing: -.005em;
+  color: var(--ink); text-decoration: none;
+  box-shadow: inset 0 -.35em 0 var(--signal);
+}
+nav.site a { color: var(--muted); text-decoration: none; margin-left: 1.1rem; font-size: .92rem; }
+nav.site a:first-child { margin-left: 0; }
+nav.site a:hover, nav.site a:focus { color: var(--ink); text-decoration: underline; }
+
+main { padding: 2.5rem 0 3.5rem; }
+
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -.015em; }
+h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
+p, li { color: var(--muted); }
+p { margin: 0 0 1rem; }
+li { margin-bottom: .35rem; }
+strong { color: var(--ink); }
+
+.lead { font-size: 1.05rem; color: var(--ink); }
+.stand { color: var(--muted); font-size: .875rem; margin-bottom: 2rem; }
+
+a { color: var(--ink); text-decoration-color: var(--signal); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--ink); }
+
+.card {
+  background: var(--raised);
+  border: 1px solid var(--hairline);
+  border-left: 3px solid var(--signal);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem .3rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.table-scroll { overflow-x: auto; margin: 1rem 0 1.5rem; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+th { color: var(--ink); font-weight: 600; }
+td { color: var(--muted); }
+
+.tiles { display: grid; gap: .75rem; margin: 2rem 0; padding: 0; list-style: none; }
+.tiles a {
+  display: block; text-decoration: none;
+  background: var(--raised); border: 1px solid var(--hairline); border-radius: 14px;
+  padding: 1rem 1.15rem;
+}
+.tiles a:hover, .tiles a:focus { border-color: var(--signal); }
+.tiles b { display: block; color: var(--ink); font-size: 1rem; }
+.tiles em { display: block; color: var(--muted); font-style: normal; font-size: .9rem; margin-top: .15rem; }
+
+address { font-style: normal; color: var(--muted); }
+
+/* Anschrift hinter einem Ausklapper: einen Klick entfernt, aber nicht auf den ersten Blick. */
+details.anschrift { margin: .5rem 0 1rem; }
+details.anschrift summary {
+  cursor: pointer; color: var(--ink); font-weight: 600;
+  list-style: none; display: inline-flex; align-items: center; gap: .45rem;
+}
+details.anschrift summary::-webkit-details-marker { display: none; }
+details.anschrift summary::before {
+  content: ""; width: .45rem; height: .45rem;
+  border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg); transition: transform .2s ease;
+}
+details.anschrift[open] summary::before { transform: rotate(45deg); }
+details.anschrift address { margin-top: .6rem; padding-left: 1rem; border-left: 2px solid var(--signal); }
+
+footer.site {
+  border-top: 1px solid var(--hairline);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted); font-size: .875rem;
+}
+footer.site a, footer.site p { color: var(--muted); }
+footer.site p { margin: 0 0 .4rem; }
+
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+@media (max-width: 30rem) {
+  h1 { font-size: 1.55rem; }
+  header.site .wrap { padding-top: .85rem; padding-bottom: .85rem; }
+}
+
+.fine-print { margin-top: 3rem; font-size: .9rem; }
+.fine-print h2 { font-size: .95rem; }
