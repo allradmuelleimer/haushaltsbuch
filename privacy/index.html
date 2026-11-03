@@ -26,7 +26,7 @@
 <main id="main">
   <div class="wrap">
     <h1>Privacy policy</h1>
-    <p class="stand">Last updated: 26 October 2026 · The German version is authoritative.</p>
+    <p class="stand">Last updated: 3 November 2026 · The German version is authoritative.</p>
 
     <div class="card">
       <h2 style="margin-top:.25rem">Summary</h2>
@@ -51,11 +51,23 @@
       <li>a cached <strong>purchase status</strong> (whether ads are removed), so no ad appears
         while offline, and whether the app has already asked for a rating</li>
     </ul>
-    <p>The app suggests categories and labels based on the weekday and time of your past entries.
-      <strong>This analysis happens on the device only.</strong></p>
+    <p>The app suggests categories and labels based on the weekday, time and amount of your past
+      entries. <strong>This analysis happens on the device only.</strong> It deliberately does not
+      learn from sensitive entries, and suggestions can be switched off in the settings.</p>
+    <h3>Scanning receipts</h3>
+    <p>When you tap the camera icon, the app opens the camera and reads the receipt straight from
+      the live image: total, shop, date and time. For this it asks once for the
+      <strong>camera</strong> permission. Alternatively you can pick a photo from your gallery; the
+      app then receives only that one image.</p>
+    <p>Text recognition (Google ML Kit, provided through Google Play services) runs
+      <strong>entirely on the device</strong>. Images and recognised text are neither stored nor
+      transferred – only the total, shop, date and time go into your entry, and only once you save.
+      Google Play services may send technical diagnostic data about how text recognition performs
+      (such as device model, errors, performance figures) to Google, but no images and no text from
+      the receipt.</p>
     <p><strong>None of this is transferred to us.</strong> We run no server and there is no user
-      account. The app does not use the camera, microphone, location, contacts, bank accounts or
-      your files, and it sends no crash reports or usage statistics.</p>
+      account. Apart from the camera for receipts, the app does not use the microphone, location,
+      contacts, bank accounts or your files, and it sends no crash reports or usage statistics.</p>
 
     <h2>Advertising</h2>
     <p>From the seventh day after installation, the app shows a banner at the top of its start
@@ -94,7 +106,8 @@
       not learn whether or how you rated.</strong></p>
 
     <h2>Permissions</h2>
-    <p>The app itself requests no permissions. The following are added by Google's libraries:
+    <p>The app itself requests only the camera (to read receipts when you tap the camera icon;
+      images are neither stored nor transferred). The following are added by Google's libraries:
       internet and network state (only for ads, purchases and the rating request), advertising ID
       and Android ad services, Google Play Billing, and foreground service / wake lock (short
       background tasks of the ads library).</p>

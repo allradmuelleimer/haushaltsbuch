@@ -26,7 +26,7 @@
 <main id="main">
   <div class="wrap">
     <h1>Datenschutzerklärung</h1>
-    <p class="stand">Stand: 26. Oktober 2026</p>
+    <p class="stand">Stand: 3. November 2026</p>
 
     <div class="card">
       <h2 style="margin-top:.25rem">Kurzfassung</h2>
@@ -53,15 +53,29 @@
         damit auch ohne Verbindung keine Werbung erscheint, sowie, ob die App schon um eine
         Bewertung gebeten hat</li>
     </ul>
-    <p>Aus Wochentag und Uhrzeit deiner bisherigen Einträge schlägt die App passende Kategorien
-      und Bezeichnungen vor. <strong>Diese Auswertung findet nur auf dem Gerät statt.</strong></p>
+    <p>Aus Wochentag, Uhrzeit und Betrag deiner bisherigen Einträge schlägt die App passende
+      Kategorien und Bezeichnungen vor. <strong>Diese Auswertung findet nur auf dem Gerät
+      statt.</strong> Heikle Einträge lernt sie bewusst nicht, und in den Einstellungen lassen sich
+      die Vorschläge ganz abschalten.</p>
     <p><strong>Nichts davon wird an uns übertragen.</strong> Wir betreiben keinen Server, und es
       gibt kein Nutzerkonto.</p>
 
+    <h3>Kassenzettel fotografieren</h3>
+    <p>Wenn du auf das Kamera-Symbol tippst, öffnet die App die Kamera und liest den Kassenzettel
+      direkt aus dem Live-Bild: Gesamtbetrag, Geschäft, Datum und Uhrzeit. Dafür fragt sie einmal
+      nach der Berechtigung <strong>Kamera</strong>. Alternativ kannst du ein Foto aus deiner
+      Galerie wählen; die App bekommt dann nur dieses eine Bild.</p>
+    <p>Die Texterkennung (Google ML Kit, bereitgestellt über die Google-Play-Dienste) läuft
+      <strong>vollständig auf dem Gerät</strong>. Bilder und erkannter Text werden nicht gespeichert
+      und nicht übertragen – übernommen werden nur Betrag, Geschäft, Datum und Uhrzeit in deinen
+      Eintrag, und auch das erst, wenn du speicherst. Die Google-Play-Dienste können technische
+      Diagnosedaten über das Funktionieren der Texterkennung an Google senden (etwa Gerätemodell,
+      Fehler, Leistungswerte), aber keine Bilder und keinen Text vom Kassenzettel.</p>
+
     <h3>Was die App nicht verwendet</h3>
-    <p>Die App greift <strong>nicht</strong> auf Kamera, Mikrofon, Standort, Kontakte, Bankkonten
-      oder deine Dateien zu und fordert dafür keine Berechtigungen an. Es gibt keine Anbindung an
-      Banken, keine Absturzberichte und keine Nutzungsstatistik.</p>
+    <p>Außer der Kamera für den Kassenzettel greift die App <strong>nicht</strong> auf Mikrofon,
+      Standort, Kontakte, Bankkonten oder deine Dateien zu. Es gibt keine Anbindung an Banken,
+      keine Absturzberichte und keine Nutzungsstatistik.</p>
 
     <h2>Werbung</h2>
     <p>Ab dem siebten Tag nach der Installation zeigt die App oben auf dem Startbildschirm einen
@@ -114,12 +128,13 @@
       App.</p>
 
     <h2>Berechtigungen und wofür sie gebraucht werden</h2>
-    <p>Die App selbst fordert keine Berechtigung an. Alle folgenden bringen die Bibliotheken von
-      Google mit:</p>
+    <p>Die App selbst fordert nur die Kamera an. Alle übrigen bringen die Bibliotheken von Google
+      mit:</p>
     <div class="table-scroll">
     <table>
       <thead><tr><th>Berechtigung</th><th>Wofür</th></tr></thead>
       <tbody>
+        <tr><td>Kamera</td><td>nur zum Lesen von Kassenzetteln, wenn du auf das Kamera-Symbol tippst; Bilder werden weder gespeichert noch übertragen</td></tr>
         <tr><td>Internet und Netzwerkstatus</td><td>nur für Werbung, Käufe und die Bitte um Bewertung — das Haushaltsbuch selbst braucht keine Verbindung</td></tr>
         <tr><td>Werbe-ID und Android-Werbedienste</td><td>die zurücksetzbare Kennung und die Werbeschnittstellen von Android, mit denen Google Anzeigen auswählt, misst und abrechnet</td></tr>
         <tr><td>Google Play Billing</td><td>Kauf und Wiederherstellung von „Werbung entfernen"</td></tr>
@@ -130,7 +145,7 @@
 
     <h2>Rechtsgrundlagen</h2>
     <ul>
-      <li><strong>Funktionen der App</strong> (Einträge, Budget, Vorschläge, Einstellungen):
+      <li><strong>Funktionen der App</strong> (Einträge, Budget, Vorschläge, Kassenzettel lesen, Einstellungen):
         Art. 6 Abs. 1 lit. b DSGVO. Diese Daten verlassen dein Gerät nicht.</li>
       <li><strong>Werbung:</strong> deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und, soweit
         auf dein Gerät zugegriffen wird, § 25 Abs. 1 TDDDG. Wo keine Einwilligung vorgeschrieben
