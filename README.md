@@ -10,6 +10,7 @@ index.html              Startseite DE
 datenschutz/            Datenschutzerklärung DE   <- diese URL geht zu Google Play und AdMob
 impressum/              Impressum DE (§ 5 DDG)
 privacy/                Privacy policy EN
+privacy/es,fr,it,nl,pt/ Privacy policy in weiteren Sprachen (Stand gleich, Deutsch ist verbindlich)
 imprint/                Imprint EN
 404.html
 css/site.css            Das einzige Stylesheet, Palette wie in der App (ui/theme/Theme.kt)
