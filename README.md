@@ -45,6 +45,19 @@ Suchmaschinen erscheinen. Die Anschrift steht nur hinter einem Ausklapper.
 In `tools/build.py` `PLAY_LIVE = True` setzen und neu bauen: Aus „Bald bei Google Play“ wird
 überall ein Knopf zum Store, und das JSON-LD bekommt `installUrl` und `offers`.
 
+## IndexNow (Bing, DuckDuckGo, Copilot, ChatGPT-Suche)
+
+Nach jedem Push, sobald GitHub Pages fertig gebaut hat, einmal:
+
+```bash
+python tools/indexnow.py
+```
+
+Meldet nur neue und geänderte Seiten aus `sitemap.xml` und merkt sich den Stand in
+`tools/indexnow_state.json` (mit committen). Schlüssel: `e8b62a185f203fd3d2982d02fef6f9af.txt` im
+Wurzelordner. Weil die Seite unter `/haushaltsbuch/` liegt, schickt das Skript `keyLocation` mit.
+Eingerichtet 21.11.2026.
+
 ## Search Console
 
 GitHub Pages liefert `robots.txt` hier unter `/haushaltsbuch/robots.txt` aus; Suchmaschinen lesen
