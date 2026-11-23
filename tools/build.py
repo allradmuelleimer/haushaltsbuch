@@ -31,7 +31,7 @@ BASE = "/haushaltsbuch"
 PLAY_ID = "com.nicedevelopments.simplebudget"
 # Erst auf True stellen, wenn die App oeffentlich bei Google Play steht. Bis dahin zeigt jede
 # Seite den neutralen Hinweis "bald bei Google Play" ohne Link.
-PLAY_LIVE = False
+PLAY_LIVE = True
 PLAY_HL = {"de": "de", "en": "en"}
 
 LOCALES = ["de", "en"]
